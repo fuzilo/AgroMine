@@ -1,6 +1,4 @@
 import pandas as pd
-import csv
-from datetime import datetime
 
 resultado = []
 
@@ -41,7 +39,7 @@ print(f"Desvio padrão do preço: R$ {std_preco:.2f}")
 
 print("EXERCICIO 2")
 
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 def plotar_boxplots(df):
     """
@@ -51,10 +49,10 @@ def plotar_boxplots(df):
         return
     
     # Configuração do estilo
-    # plt.style.use('seaborn')
+    plt.style.use('seaborn')
     
     # Cria figura com 2 subplots (1 linha, 2 colunas)
-    fig, (ax1, ax2) = plt(1, 2, figsize=(12, 6))
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 6))
     fig.suptitle('Identificação de Valores Anômalos', fontsize=14)
     
     # Boxplot para quantidade vendida
