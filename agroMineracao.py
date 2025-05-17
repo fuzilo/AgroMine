@@ -37,3 +37,38 @@ print(f"Média de quantidade vendida: {media_qtd:.2f}")
 print(f"Desvio padrão da quantidade: {std_qtd:.2f}")
 print(f"\nMédia de preço unitário: R$ {media_preco:.2f}")
 print(f"Desvio padrão do preço: R$ {std_preco:.2f}")
+
+
+print("EXERCICIO 2")
+
+import matplotlib as plt
+
+def plotar_boxplots(df):
+    """
+    Cria boxplots para identificar valores anômalos
+    """
+    if df is None:
+        return
+    
+    # Configuração do estilo
+    # plt.style.use('seaborn')
+    
+    # Cria figura com 2 subplots (1 linha, 2 colunas)
+    fig, (ax1, ax2) = plt(1, 2, figsize=(12, 6))
+    fig.suptitle('Identificação de Valores Anômalos', fontsize=14)
+    
+    # Boxplot para quantidade vendida
+    df.boxplot(column='quantidade_vendida', ax=ax1, vert=False)
+    ax1.set_title('Quantidade Vendida')
+    ax1.set_xlabel('Unidades')
+    
+    # Boxplot para preço unitário
+    df.boxplot(column='preco_unitario', ax=ax2, vert=False)
+    ax2.set_title('Preço Unitário')
+    ax2.set_xlabel('R$')
+    
+    # Ajusta layout e mostra
+    plt.tight_layout()
+    plt.show()
+
+plotar_boxplots(df)
