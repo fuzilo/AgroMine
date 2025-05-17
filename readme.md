@@ -80,4 +80,4 @@ Destaquem no gráfico (usando cores ou anotações) os resultados mais expressiv
 
 Escrevam uma breve interpretação para cada gráfico, explicando os padrões observados. 
 
- 
+ asdasdasdasdasdasd
